@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project1- color changer</title>
+    <style>
+        body{
+            background-color:violet;
+            color:black;
+            
+        }
+        .colors{
+            padding:34px;
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+            gap:40px;
+            margin-top:5px;
+            flex-wrap: wrap;
+            color: black;
+            padding:60px;
+            text-decoration:none;
+        }
+        .button{
+            height: 100px;
+            width:100px;
+            border:2px solid black;
+            cursor: pointer;
+        }
+        .button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px currentColor;
+}
+        
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" alt="page">HOME</a>
+        <a target="_blank" href="https://www.youtube.com">youtube</a>
+    </nav>
+    <h1>This is my first project on JAVASCRIPT of color switcher</h1>
+    <div class="colors">
+    <span class="button" id="blue" style="background-color:rgb(8, 202, 236);"></span>
+    <span class="button" id="green" style="background-color:greenyellow;"></span>
+    <span class="button" id="red" style="background-color:red;"></span>
+    <span class="button" id="pink" style="background-color:pink;"></span>
+    </div>
+
+
+    <script src="01PROJECT_color.js"></script>
+</body>
+</html>
