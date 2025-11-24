@@ -1,0 +1,81 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript ki Jai</h1>
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        // setInterval(function(){
+           
+        //     console.log("Kulwinder",Date.now())
+        // },1000)
+
+        
+        // const starttime = function(){
+            //     document.querySelector('h1').innerHTML = "Kulwinder"
+            //     console.log("Kulwinder",Date.now())
+            // }
+            // const starting = setInterval(starttime,1000)
+            let intervalid;
+
+            document.querySelector('#start').addEventListener('click',function(){
+            clearInterval(intervalid);
+            intervalid = setInterval(() =>{
+                console.log("Kulwinder",Date.now());
+            },1000)
+        })
+
+
+        document.querySelector('#stop').addEventListener('click',function(){
+            clearInterval(intervalid);
+            console.log("stopped");
+        });
+
+
+    </script>
+</body>
+</html> 
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Stop Example</title>
+</head>
+<body>
+
+    <h1>Javascript ki Jai</h1>
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        let intervalID; // Declare global interval variable
+
+        // Start Button
+        document.getElementById('start').addEventListener('click', function() {
+            clearInterval(intervalID); // Stop any existing interval
+            intervalID = setInterval(() => {
+                console.log("Kulwinder",Date.now());
+            }, 1000);
+        });
+
+        // Stop Button
+        document.getElementById('stop').addEventListener('click', function() {
+            clearInterval(intervalID);
+            console.log("stopped");
+        });
+    </script>
+
+</body>
+</html> -->

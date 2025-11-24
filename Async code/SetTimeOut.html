@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Project</title>
+</head>
+<body>
+    <h1>This is the Async Project</h1>
+    <button id="stop">
+        stop
+    </button>
+
+
+    <script>
+
+        const name = function(){
+            console.log("Alright")
+        }
+        setTimeout(name,1000)
+        setTimeout(function(){
+            console.log("Kulwidner")
+        },2000)
+
+
+
+        const changeText = function(){
+            document.querySelector('h1').innerHTML="Js Lecture"
+        }
+        setTimeout(changeText,1000)
+
+
+        const changeText1 = function(){
+            document.querySelector('h1').innerHTML="Js script"
+        }
+        setTimeout(changeText1,2000)
+        const changeText2 = function(){
+            document.querySelector('h1').innerHTML="Js ki padhai"
+        }
+        const chnageme = setTimeout(changeText2,3000)
+        const changeText3 = function(){
+            document.querySelector('h1').innerHTML="Js explorer"
+        }
+        const chnageme1 = setTimeout(changeText3,4000)
+
+        const changeText4 = function(){
+            document.querySelector('h1').innerHTML="Js ki jai"
+        }
+        const chnageme2 = setTimeout(changeText4,5000)
+
+
+        document.querySelector("#stop").addEventListener('click',function(){
+            clearTimeout(chnageme)
+            console.log("Stopped")
+        })
+        document.querySelector("#stop").addEventListener('click',function(){
+            clearTimeout(chnageme1)
+            console.log("Stopped")
+        })
+        document.querySelector("#stop").addEventListener('click',function(){
+            clearTimeout(chnageme2)
+            console.log("Stopped")
+        })
+
+
+    </script>
+</body>
+</html>
