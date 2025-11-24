@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Bubbling</title>
+    <style>
+        .child{
+            background-color: rgb(252, 165, 194);
+            color: black;
+            border:3px solid black;
+            cursor:pointer;
+            padding: 14px;
+            margin:14px;
+        }
+        .container{
+            background-color: yellowgreen;
+            padding: 14px;
+            margin:14px;
+            
+        }
+        .childcontainer{
+            
+            background-color: rgb(15, 84, 233);
+            padding: 14px;
+            margin:14px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="childcontainer">
+            <div class="child">
+                hiii this is the child jab mere pe javascript lgaoghe to upar walo pe b khud hi lgh jayegi
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <script src="Events_bubbling.html"></script> -->
+
+    <script>
+        document.querySelector('.child').addEventListener('click',function(e){
+            e.stopPropagation()
+            alert("child was clicked")
+        })
+        document.querySelector('.childcontainer').addEventListener('click',function(e){
+            e.stopPropagation()
+            alert("childcontainer was clicked")
+        })
+        document.querySelector('.container').addEventListener('click',function(){
+            alert("container was clicked")
+        })
+    </script>
+
+
+</body>
+</html>

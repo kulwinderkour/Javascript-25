@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML EVENTS</title>
+</head>
+<body >
+
+    <h1>Amazing images</h1>
+    <div>
+   <ul id="amazing-images">
+      <li><img width="200px" id="photoshop" src="https://cdn.pixabay.com/photo/2018/03/31/13/43/bird-3278162_1280.jpg" alt="Bird Image"></li>
+
+        <li><img width="200px" id="japan" src="https://grants.gettyimages.com/images/grants/GettyImages-1229275252.png" alt="Japan Image"></li>
+
+        <li><img width="200px" id="river" src="https://picjumbo.com/wp-content/uploads/mysterious-fantasy-forest-with-old-bridges-free-image.jpg" alt="Forest Bridge Image"></li>
+
+        <li><img width="200px" id="girl" src="https://images.pexels.com/photos/2541239/pexels-photo-2541239.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Girl Image"></li>
+
+        <li><img width="200px" id="asthetic" src="https://www.piclumen.com/wp-content/uploads/2024/10/piclumen-marquee-04.webp" alt="Aesthetic Image"></li>
+
+        <li><img width="200px" id="monkey" src="https://images.pexels.com/photos/1207875/pexels-photo-1207875.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="monkey"></li>
+        <a id="google" style="background-color: rgb(43, 255, 0);" href="https://google.com" target="_blank">Google</a>
+
+   </ul>
+    </div>
+
+    <script>
+        // document.getElementById('river').onclick = function(){
+        //     alert("river clicked")    // NOT A GOOD APPROACH
+        // }
+
+        
+    /*
+        attachEvent()
+    */
+
+        document.getElementById('monkey').addEventListener('click',function(e){
+            // alert("monkey clicked")   INSTEAD OF ALERT WE USE EVENT OBJECT =  'e'
+            console.log(e)
+
+        },false)  //false is the default - event public and true is event propogation
+
+
+
+        // TYPES, TIMESTAMPS, defaultPrevented
+        // target, toelement, scrElement, currentTarget,
+        // clientX,clientY, screenX, screenY
+        // altkey, ctrlkey, shiftkey,  keycode 
+
+
+
+        document.getElementById('google').addEventListener('click',function(e){
+            e.preventDefault()
+            e.stopPropagation()
+            print("google clicked")
+        },false)
+
+
+
+
+        
+    </script>
+</body>
+</html>
