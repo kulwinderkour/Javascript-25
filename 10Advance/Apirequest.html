@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API REQUEST</title>
+</head>
+<body>
+    <h1>API -  XML http Request</h1>
+    <script>
+        const requesturl = "https://api.github.com/users/KulwinderKour"
+        const xml = new XMLHttpRequest();
+        xml.open('GET',requesturl)
+        xml.onreadystatechange = function(){
+            console.log(xml.readyState);
+            if(xml.readyState ===4){
+                const data = JSON.parse(this.responseText);     //TYPE OF DATA IS STRING NOT OBJECT (DATA ALWAYS FROM THE URL IS IN THE STRING FORMAT NOT IN THE OBJECT FORMAT)
+                console.log(data.followers)
+            }
+        }
+        xml.send()
+    </script>
+</body>
+</html>
