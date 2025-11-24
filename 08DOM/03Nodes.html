@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node list</title>
+</head>
+<body style="background-color: black; color: black;">
+    
+</body>
+<script>
+    const div = document.createElement("div")   //IMPORTANT TO CREATE ELEMENT
+
+
+
+    console.log(div)
+    div.className = "main"
+    div.id = "myid"
+    div.id = Math.round(Math.random() * 10 + 1 )
+    div.setAttribute("id" ,"myid")
+    div.style.backgroundColor = 'green';
+    div.style.padding = "34px";
+    div.innerText = "chai aur ram ram"     //MAINLY PROGRAMMERS AVOID THIS METHOD 
+
+
+
+
+
+    const newtextNOde = document.createTextNode("teri yaada share mai jee ta lavangi")
+    console.log(newtextNOde)
+    div.appendChild(newtextNOde)  // THEY USE THIS ONE
+
+
+     /*
+            NOW TO PRINT THIS ON THE WEBPAGE document.body.appendchild(div)
+     */
+
+
+    document.body.appendChild(div)
+</script>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and remove DOM</title>
+</head>
+<body style="background-color: black; color:aliceblue">
+    <ul class="language">
+        <li>JAVASCRIPT</li>
+        <li>C</li>
+    </ul>
+
+    <script>
+
+        /*
+
+            ######## THIS IS AGAIN PREVIOUS METHOD TO PRINT ANYTHING ON THE SCREEN
+    
+        // const list_new = document.createElement("list","newlist")
+        // console.log(list_new)
+        // list_new.setAttribute("id","newid" )
+        // list_new.style.backgroundColor = "red"
+        // const new_node = document.createTextNode("badmashi nii mitrr")
+        // list_new.appendChild(new_node);
+        // const print_web = document.body.appendChild(list_new)
+
+
+        */
+
+
+        // NOW TO PRINT THE LIST USING JAVASCRIPT IN THE WEBPAGE
+        
+        function addlang(langname){
+            const li = document.createElement('li')
+            li.innerHTML = `${langname}`
+            document.querySelector('.language').appendChild(li)
+
+        }
+
+        addlang("Python")
+
+
+
+        // ANOTHER OPTIMAL WAY TO SOLVE THIS USING FUNCTIONS FOR LARGE PROJECTS
+
+        function addoptlang(langname){
+            const li = document.createElement('li')
+            li.appendChild(document.createTextNode(langname))
+            document.querySelector('.language').appendChild(li)
+
+        }
+
+        addoptlang("jana to ata nhi")
+        
+
+        // EDIT IN THE CODE
+        const firstlang = document.querySelector("li:nth-child(2)")
+        console.log(secondlang);
+        firstlang.innerHTML = "mojj"
+       
+        
+
+
+
+    </script>
+</body>
+</html>

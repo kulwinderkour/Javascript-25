@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Web development</title>
+    <style>
+        *{
+            background-color: black;
+            color:aliceblue;
+        }
+
+       .parent{
+        padding:35px;
+        margin:35px;
+       }z
+    </style>
+</head>
+<body>
+
+
+    <div class="newparent">
+         <div class="newday">Monday</div>
+         <div class="newday">Tuesday</div>
+         <div class="newday">Wednesday</div>
+         <div class="newday">Thursday</div>
+         <div class="newday">friday</div>       
+    </div>
+
+    <script>
+        
+        </script>
+
+    /* <div class="parent">
+        <!-- this is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">Thursday</div>
+    </div> 
+
+
+
+
+    <script>
+        const parent = document.querySelector('.parent')
+           console.log(parent);
+           console.log(parent.children);
+
+
+
+
+/*
+        THE OUTPUT OF THE console.log(parent) is :
+        <div class="parent">
+        <div class="day" Monday/div>
+        <div class="day" style-color: orange;">Tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day" Thursday/div>
+        </div>
+
+
+        THE OUTPUT OF THE console.log(parent.children)
+        HTMLCollection(4) [div.day, div.day, div.day, div.day]
+           0: div.day
+            1: div.day
+            2:  div.day
+            3:div.day
+            length: 4
+            [[Prototype]]:HTMLCollection
+*/
+
+
+
+
+
+
+        for (let i = 0; i < parent.children.length; i++) {
+            console.log(parent.children[i].innerHTML);  
+                /*
+                    Monday
+                    Tuesday
+                    Wednesday
+                    thurday
+                */
+        }
+        parent.children[1].style.color = "orange";
+
+        console.log(parent.firstElementChild);     // MONDAY
+        console.log(parent.lastElementChild)       // THURSDAY
+
+
+        const OneDay = document.querySelector(".day")
+        // console.log(OneDay)
+        // console.log(OneDay.parentElement)
+        // console.log(OneDay.nextElementSibling)
+        console.log("Nodes:",parent.childNodes)   
+        
+    </script>
+</body>
+</html>

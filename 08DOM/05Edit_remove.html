@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      * {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="language">
+      <li>Python</li>
+    </ul>
+  </body>
+  <script>
+    function addlang(langname){
+      const li = document.createElement('li')
+      li.innerHTML = `${langname}`
+      document.querySelector(".language").appendChild(li)
+    }
+    addlang("c++");
+    addlang("mojo")
+
+
+  
+
+  //EDIT
+
+  const secondlang =  document.querySelector("li:nth-child(2)")
+  // BUT THIS IS NOT OPTIMISED AGAIN WE ARE USING THE INNER HTML TREE HAS TO TRAVERSE COMPLETELY
+  //secondlang.innerHTML = "mojo"
+
+  const newli = document.createElement('li')
+  newli.textContent = "shava shava"
+  secondlang.replaceWith(newli)
+
+
+  // remove
+   const lastlang =document.querySelector("li:last-child")
+   lastlang.remove()
+
+
+  </script>
+</html>
