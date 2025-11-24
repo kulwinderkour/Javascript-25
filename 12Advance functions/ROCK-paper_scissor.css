@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+    position: fixed;
+    top:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #081b31;
+  color: aliceblue;
+  height: 5rem;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  min-height: 100vh;       /* take full height */
+  gap: 20px;               /* spacing between sections */
+}
+
+.choices {
+  display: flex;
+  flex-direction: row; /* stack vertically */
+  align-items: center; /* center horizontally */
+  gap: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choice1:hover{
+    opacity: 0.5;
+}
+.choice2:hover{
+    opacity: 0.5;
+}
+.choice3:hover{
+    opacity: 0.5;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.score-board {
+
+flex-direction: row;
+  gap: 50px;
+  display: flex;
+  justify-content: center;
+  
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+
+#user-score, #computer-score{
+  font-size: 2rem;
+}
+
+/* Each choice box */
+.choice1,
+.choice2,
+.choice3 {
+  height: 180px;
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.choices img {
+  height: 180px;
+  width: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 1px;        /* optional spacing inside box */
+   
+}
+
+.message-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border:2px solid #081b31;
+  background-color: #081b31;
+  color: white;
+  height: 46px;
+  overflow: hidden;
+  width: 200px;
+  border-radius: 34px;
+  align-items: center;
+}
+
